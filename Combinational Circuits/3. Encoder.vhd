@@ -18,16 +18,11 @@ begin
     process(D)
     begin
         -- Using a Priority-style check to avoid undefined states
-        if (D = "1000") then 
-            Y <= "11"; -- D3 is active (Binary 3)
-        elsif (D = "0100") then 
-            Y <= "10"; -- D2 is active (Binary 2)
-        elsif (D = "0010") then 
-            Y <= "01"; -- D1 is active (Binary 1)
-        elsif (D = "0001") then 
-            Y <= "00"; -- D0 is active (Binary 0)
-        else 
-            Y <= "00"; -- Default/Undefined state
+        if (D = "1000") then Y <= "11"; -- D3 is active (Binary 3)
+        elsif (D = "0100") then Y <= "10"; -- D2 is active (Binary 2)
+        elsif (D = "0010") then Y <= "01"; -- D1 is active (Binary 1)
+        elsif (D = "0001") then Y <= "00"; -- D0 is active (Binary 0)
+        else Y <= "00"; -- Default/Undefined state
         end if;
     end process;
 end ArchitectureEncoder;
